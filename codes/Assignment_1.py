@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import bernoulli
@@ -31,34 +25,3 @@ plt.ylim(0, 1000)
 ax.set(xlabel='Bernoulli', ylabel='Frequency')
 plt.savefig('../../figures/probexm/probexm1.eps')
 plt.show()
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
