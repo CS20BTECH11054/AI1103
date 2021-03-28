@@ -1,0 +1,221 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+\graphicspath{{figures/}}
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{$\left\vert#1\right\vert$}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{$\left\lVert#1\right\rVert$}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E$\left[ #1 \right]$}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 3}
+\author{Vaddamani Saketh - CS20BTECH11054}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+Download all python codes from 
+\begin{lstlisting}
+https://github.com/CS20BTECH11054/AI1103/blob/main/Assignment_3/codes/Assignment_3.py
+\end{lstlisting}
+%
+and latex-tikz codes from 
+%
+\begin{lstlisting}
+https://github.com/CS20BTECH11054/AI1103/blob/main/Assignment_3/Assignment_3.tex
+\end{lstlisting}
+\section{Problem}
+A continuous random variable X has a probability density function $f\brak{x}=e^{-x}$, $0<x<\infty$, then  $P\brak{X>1}$ is
+
+\section{Solution}
+Let the CDF of $f\brak{x}$ be denoted by $F_X\brak{x}$ \\
+We know that,
+\begin{align}
+\frac{d\brak{F_X\brak{x}}}{dx} = f\brak{x} \notag \\
+d\brak{F_X\brak{x}} = f\brak{x} \,dx \label{Eq:1}
+\end{align}
+Therefore, applying definite integral on both sides from 0 to x in \eqref{Eq:1}, we get,
+\begin{align}
+\int\limits_{0}^{x} d\brak{F_X\brak{x}} = \int\limits_{0}^{x} f\brak{x} \,dx \notag \\
+\int\limits_{0}^{x} d\brak{F_X\brak{x}} = \int\limits_{0}^{x} e^{-x} \,dx \label{Eq:2}
+\end{align}
+We know that,
+\begin{align}
+\int\limits_{a}^{b} e^{-x} = -e^{-b}-\brak{-e^{-a}} \notag \\
+\int\limits_{a}^{b} e^{-x} = -e^{-a}-e^{-b}\label{Eq:3}
+\end{align}
+We also know that,
+\begin{align}
+\int\limits_{a}^{b} d\brak{F_X\brak{x}} = F_X\brak{b} - F_x\brak{a} \label{Eq:Extra}
+\end{align}
+By using \eqref{Eq:3} and \eqref{Eq:Extra} in \eqref{Eq:2} we can write that,
+\begin{align}
+F_X\brak{x} - F_X\brak{0} = e^{-0} - e^{-x} \notag \\
+F_X\brak{x} - F_X\brak{0} = 1 - e^{-x} \label{Eq:4}
+\end{align}
+We know that,
+\begin{align}
+F_X\brak{x} = P\brak{X\leq x} \label{Eq:5}
+\end{align}
+Substituting $x = 0$ in \eqref{Eq:5}, we get
+\begin{align}
+F_X\brak{0} = P\brak{X \leq 0} \label{Eq:6}
+\end{align}
+But we know that there is no probability for the random variable X to satisfy $X \leq 0$,So,
+\begin{align}
+P\brak{X \leq 0} = 0 \label{Eq:7}
+\end{align}
+Substituting \eqref{Eq:7} in \eqref{Eq:5}, we get
+\begin{align}
+F_X\brak{0} = 0 \label{Eq:8}
+\end{align}
+Substituting \eqref{Eq:8} in \eqref{Eq:4}, we get
+\begin{align}
+F_X\brak{x} = 1 - e^{-x} \label{Eq:11}
+\end{align}
+From \eqref{Eq:5} and \eqref{Eq:11} we get,
+\begin{align}
+P\brak{X\leq x} = 1-e^{-x} \label{Eq:12}
+\end{align}
+Substituting x=1 in \eqref{Eq:12} we get,
+\begin{align}
+P\brak{X\leq 1} = 1-e^{-1} \label{Eq:13}
+\end{align}
+We know that, as total probability is equal to 1,
+\begin{align}
+P\brak{X>1}+P\brak{X\leq1}=1 \\
+P\brak{X>1}=1-P\brak{X\leq 1}\label{Eq:14}
+\end{align}
+To find $P\brak{X>1}$, we substitute \eqref{Eq:13} in \eqref{Eq:14},
+\begin{align}
+P\brak{X>1}=1-\brak{1-e^{-1}} \\
+P\brak{X>1}=e^{-1}=\frac{1}{e} \label{Eq:15}
+\end{align}
+Therefore, P\brak{X>1} = $\frac{1}{e}$
+\newpage
+\begin{figure}
+\includegraphics[width=15cm]{figure_1.png}
+    \caption{\textbf{\huge{PDF}}} 
+\end{figure}
+\begin{figure}
+\includegraphics[width=15cm]{figure_2.png}
+    \caption{\textbf{\huge{CDF}}}
+\end{figure}
+\end{document}
+
